@@ -52,10 +52,6 @@ def make_mp4(page_images, audio_path, output_path, fps=24, secs_per_page=3):
     video.write_videofile(output_path, fps=fps)
     return output_path
 
-# ------------------------------------------------------------------
-# GUI application
-# ------------------------------------------------------------------
-
 class ConverterApp(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -145,4 +141,5 @@ class ConverterApp(tk.Tk):
         self.status.config(text=msg)
 
 if __name__ == "__main__":
+
     ConverterApp().mainloop()
