@@ -57,6 +57,8 @@ class ConverterApp(tk.Tk):
         super().__init__()
         self.title("PDF to MP3/MP4 Converter")
         self.geometry("450x350")
+        self.iconbitmap("Images/face-angry.ico")
+        self.iconwindow = ImageTk.PhotoImage(Image.open("Images/face-angry.png"))
         self.pdf_path = tk.StringVar()
         self.make_mp3_var = tk.BooleanVar(value=True)
         self.make_mp4_var = tk.BooleanVar(value=False)
@@ -143,3 +145,4 @@ class ConverterApp(tk.Tk):
 if __name__ == "__main__":
 
     ConverterApp().mainloop()
+
